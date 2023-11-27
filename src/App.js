@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import imagen0 from  './imagenes/roble1.png'; 
+import imagen1 from  './imagenes/roble2.png'; git
+import imagen2 from  './imagenes/roble3.png';
 
-function App() {
+// import './App.css';
+import './micss.css';//importamos un css propio
+ 
+ function App() {
+   let nombre=["roble1","roble2", "roble3"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+  <div className="arboles">
+
+    <div className="caja">
+    <img src={imagen0}/>
+    <div className="nombre">{nombre[0]} </div> 
+    </div>
+    <div className="caja">
+    <img src={imagen1}/>
+    <div className="nombre">{nombre[1]} </div> 
+    </div>
+    <div className="caja">
+    <img src={imagen2}/>
+    <div className="nombre">{nombre[2]} </div> 
+    </div>
+
     </div>
   );
 }
