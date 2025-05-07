@@ -31,7 +31,7 @@
 
     </div>
 
-    <div class="galeria" id="galeriaIamgenes">
+    <div class="galeria" id="galeriaImagenes">
         <div>
             <img src="imagenes/img0.jpg" alt="imagen0" width="300" height="250">
             <p>Aconcagua</p>
@@ -63,7 +63,7 @@
             var url=document.getElementById("imagenURL").value; 
             //almacena en la variable lo q obtiene por id del input
             var pie=document.getElementById("pieFoto").value; //value para q lo guarde
-            var galeria=document.getElementById("galeriaIamgenes");
+            var galeria=document.getElementById("galeriaImaimg0genes");
             if(url && pie){
                 var div=document.createElement("div");
                 var img=document.createElement("img");
@@ -74,7 +74,7 @@
                 p.textContent=pie;
                 div.appendChild(img);
                 div.appendChild(p);
-                galeria.appendChild(div); //aca  no esta funcionando
+                galeria.appendChild(div); 
                 document.getElementById("imagenURL").value="";
                 document.getElementById("pieFoto").value="";
             } else alert("ingreasar imagen y pie por favor") ;
