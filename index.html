@@ -23,7 +23,15 @@
 </head>
 <body>
     <h1 style="text-align: center;">Galeria Imagenes de Mendoza</h1>
-    <div class="galeria">
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <input type="text" id="imagenURL" placeholder="URL de la imagen">
+        <input type="text" id="pieFoto" placeholder="Pie de la foto">
+        <button onclick  ="addImage()"> Agregar Imagen </button>
+
+    </div>
+
+    <div class="galeria" id="galeriaIamgenes">
         <div>
             <img src="imagenes/img0.jpg" alt="imagen0" width="300" height="250">
             <p>Aconcagua</p>
@@ -49,5 +57,29 @@
             <p>Horcnones</p>
         </div>                    
     </div>
+
+    <script>
+        function addImage(){
+            var url=document.getElementById("imagenURL").value; 
+            //almacena en la variable lo q obtiene por id del input
+            var pie=document.getElementById("pieFoto").value; //value para q lo guarde
+            var galeria=document.getElementById("galeriaIamgenes");
+            if(url && pie){
+                var div=document.createElement("div");
+                var img=document.createElement("img");
+                img.src=url;
+                img.width=300;
+                img.height=250;
+                var p=document.createElement("p");
+                p.textContent=pie;
+                div.appendChild(img);
+                div.appendChild(p);
+                galeria.appendChild(div); //aca  no esta funcionando
+                document.getElementById("imagenURL").value="";
+                document.getElementById("pieFoto").value="";
+            } else alert("ingreasar imagen y pie por favor") ;
+        }
+    </script>
+
 </body>
 </html>
