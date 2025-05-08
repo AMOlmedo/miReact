@@ -1,0 +1,11 @@
+
+PASOS PARA LA CREACION DE UN PROYECTO REACT
+
+1- CREACIONN DEL PROYECTO 
+npx create-react-app nombreProyecto
+
+2-cd nombreProyectono
+
+3-npm start
+
+4-
