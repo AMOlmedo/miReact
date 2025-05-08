@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-function GaleriaDeImagenes() {
+function GaleriaDeImagenes() {  
+  /* a esta funcion se la denomina COMPONENTE siempre q devuelva 
+  componente html  de lo contrario es una funcion normal*/
   const [imagenes, setImagenes] = useState([
     { src: 'imagenes/img0.jpg', alt: 'Imagen 1', caption: 'Pie de foto Imagen 1' },
     { src: 'imagenes/img1.jpg', alt: 'Imagen 2', caption: 'Pie de foto Imagen 2' },
@@ -18,10 +20,16 @@ function GaleriaDeImagenes() {
     } else {
       alert('Por favor introduce imagen y pie');
     }
+    
   };
 
+  // los style dentro de JSX se consideran elementos. van dentro de llaves
+  // ejm <h1 style={{ textAlign: 'center' }}>
+  // {{}}   las primeras indican codigo JS y las 2das OBJETOS JS
+  // los style se consideran objetos en JS
   return (
     <div>
+      
       <h1 style={{ textAlign: 'center' }}>Galería de imágenes</h1>
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="URL de la imagen" />
@@ -36,6 +44,7 @@ function GaleriaDeImagenes() {
           </div>
         ))}
       </div>
+      <button style={{marginTop:"10px", marginLeft:"40px"}}>Imformes</button>
     </div>
   );
 }
